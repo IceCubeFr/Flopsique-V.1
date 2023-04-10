@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Flopsique</title>
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/fonctions.js"></script>
+        <link rel="shortcut icon" href="images/logo_sans_texte.png" type="image">
+    </head>
+    <body>
+        <fieldset id="en-tete">
+            <img id="logo" src="images/music.png">
+            <h1 id="titre">FLOPSIQUE</h1>
+            <h4>La référence de la musique</h4>
+        </fieldset>
+        <p></p>
+        <!--Menu des musiques-->
+
+        <ul class="menu">
+            <li>
+                <p class="menuWii" onclick="wii()">Wii</p>
+            </li>
+            <li>
+                <p class="menuLol" onclick="lol()">League Of Legends</p>
+            </li>
+            <li>
+                <p class="menuRap" onclick="rap()">Rap Français</p>
+            </li>
+        </ul>
+
+        <!--Liste des musiques-->
+
+        <div id="musiqueWii">
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/musique_fond.mp3')">
+                <p id="titreMusique">Wii Shop</p>
+                <p id="description">Nintendo</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/wiisports.mp3')">
+                <p id="titreMusique">Wii Sport Theme</p>
+                <p id="description">Nintendo</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/placemii.mp3')">
+                <p id="titreMusique">Place Wii Theme</p>
+                <p id="description">Nintendo</p>
+            </fieldset>
+        </div>
+
+        <div id="musiqueLol">
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/starwalkin.mp3')">
+                <p id="titreMusique">Star Walkin</p>
+                <p id="description">Lil Nas X</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/legendsneverdie.mp3')">
+                <p id="titreMusique">Legends Never Die</p>
+                <p id="description">Against The Current</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/warriors.mp3')">
+                <p id="titreMusique">Warriors</p>
+                <p id="description">Imagine Dragons</p>
+            </fieldset>
+        </div>
+
+        <div id="musiqueRap">
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/apresvousmadame.mp3')">
+                <p id="titreMusique">Après Vous Madame</p>
+                <p id="description">GIMS</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/lodeurdelessence.mp3')">
+                <p id="titreMusique">L'odeur de l'essence</p>
+                <p id="description">Orelsan</p>
+            </fieldset>
+
+            <fieldset class="musique">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer('musiques/basique.mp3')">
+                <p id="titreMusique">Basique.</p>
+                <p id="description">Orelsan</p>
+            </fieldset>
+        </div>
+
+        <!--Numéro de version-->
+        <p id="version">Version 1.0 - Released</p>
+        <!--Progress Bar de la musique-->
+        <fieldset id="barProgress">
+            <p></p>
+            <div class="progress-container">
+                <img class="button" id="boutonPlayBarre" src="images/svg/play.svg" onclick="lancer2()">
+                <img class="button" id="boutonPauseBarre" src="images/svg/rectangle.svg" onclick="stop()">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="duration">0:00</span>
+                <input type="range" id="volume" name="volume" min="0" max="100" value="100" onchange="volume()" class="left">
+            </div>
+        </fieldset>
+    </body>
+</html>

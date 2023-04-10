@@ -1,0 +1,345 @@
+body {
+    background: linear-gradient(270deg, #0054ff, #1e1e1e);
+    background-size: 400% 400%;
+    color: white;
+
+    -webkit-animation: fond 39s ease infinite;
+    -moz-animation: fond 39s ease infinite;
+    animation: fond 39s ease infinite;
+    flex-wrap: wrap;
+    
+}
+
+@-webkit-keyframes fond {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes fond {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes fond {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+h1 {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 10px;
+    font-style: italic;
+}
+
+#titre {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5CE1E6;
+}
+
+h4 {
+    text-align: center;
+    font-style: italic;
+    color: #38B6FF;
+}
+
+#accueil {
+    position: fixed; top: 0;
+}
+
+#en-tete {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #001822;
+}
+
+#accueil, #en-tete {
+    text-align: center;
+    object-position: center;
+    border: double;
+    border-radius: 20px;
+    font-size: larger;
+}
+
+#categorie {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#version {
+    position: fixed; top: 0; right: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color:darkgray;
+    font-size: x-large;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: #3D8B7B;
+    border-radius: 5px;
+}
+  
+.progress {
+    display: block;
+    height: 100%;
+    background-color: #8EFFE7;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#barProgress {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: larger;
+    width: 1080;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #001822;
+    color: #cccccc;
+}
+
+#logo {
+    zoom: 20%;
+}
+
+.button{
+    position: relative;
+    border-radius: 4em;
+    font-size: 16px;
+    color: white;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+  
+.button:hover {
+    transition-duration: 0.1s;
+    background-color: #3A3A3A;
+}
+  
+.button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+  
+.button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+  
+.button:active {
+    top: 1px;
+}
+
+
+#musiqueWii, #musiqueLol, #musiqueRap {
+    display: none;
+}
+
+@keyframes wipe {
+    0% {
+    transform: translate(0, 300%);
+    }
+    100% {
+    transform: translate(0, 0%);
+    opacity: 1;
+    }
+}
+
+.musique {
+    display: flex;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-color:#1e1e1e;
+}
+
+.duration {
+    margin-right: 50px;
+}
+  
+
+@keyframes fade-in {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+
+#titreMusique {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px;
+}
+
+#description {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+}
+
+
+/*Gestion boutons*/
+#boutonPlay {
+    cursor: pointer;
+    zoom: 75%;
+    width: auto;
+    margin-right: 200px;
+}
+
+#boutonPlayBarre, #boutonPauseBarre {
+    cursor: pointer;
+    zoom: 75%;
+    width: auto;
+    margin-right: 15px;
+}
+
+#boutonPauseBarre {
+    display: none;
+}
+
+/*------------------------------------------------------------------ Menu Catégories*/
+
+.menu {
+    display: flex;
+    cursor: pointer;
+    padding:0;
+    justify-content: center;
+    font-size: larger;
+}
+
+.menu li {
+    list-style-type: none ;
+    
+}
+
+.menu p {
+    display:block;
+    min-width: 120px;
+}
+
+.menu p {
+    display:block;
+    min-width: 120px;
+    margin: 0.5rem;
+    padding-right: 10px;
+    padding-top: 0.4rem 0;
+    padding-bottom: 0.4rem 0;
+    padding-left: 10px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/*------------------------------------------------------------------ Menu Wii*/
+
+.menuWii {
+    color: transparent;
+    border-left: 5px solid #3D8B7B;
+    position: relative;
+    z-index: 1;
+}
+
+.menuWii::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3D8B7B;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+  
+.menuWii:hover::before {
+    width: 100%;
+}
+
+/*------------------------------------------------------------------ Menu Lol*/
+
+.menuLol {
+    color: transparent;
+    padding-left: 100px;
+    border-left: 5px solid #3D8B7B;
+    position: relative;
+    z-index: 1;
+}
+
+.menuLol::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3D8B7B;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+  
+.menuLol:hover::before {
+    width: 100%;
+}
+
+/*------------------------------------------------------------------ Menu Rap*/
+
+.menuRap {
+    color: transparent;
+    border-left: 5px solid #3D8B7B;
+    position: relative;
+    z-index: 1;
+}
+
+.menuRap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3D8B7B;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+  
+.menuRap:hover::before {
+    width: 100%;
+}
